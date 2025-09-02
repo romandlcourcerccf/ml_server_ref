@@ -1,0 +1,1 @@
+mlserver start model_serving
