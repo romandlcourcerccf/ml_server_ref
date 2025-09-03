@@ -1,4 +1,7 @@
 {
     "name": "ref-model",
-    "implementation": "inference.RefModel"
+    "implementation": "inference.RefModel",
+    "parameters": {
+        "uri": "./model/model.pkl"
+    }
 }

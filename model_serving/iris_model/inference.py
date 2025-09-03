@@ -1,13 +1,17 @@
 from mlserver import MLModel, types
+from mlserver.utils import get_model_uri
 import pickle
 import numpy as np
 
 class RefModel(MLModel):
 
     async def load(self):
-        print('model loaded')
+        print('model loaded ')
 
-        with open('model_serving/iris_model/model/model.pkl', 'rb') as f:
+        uri = await get_model_uri(self._settings)
+        print('uri :', uri)
+        # with open('model_serving/iris_model/model/model.pkl', 'rb') as f:
+        with open(uri, 'rb') as f:
             self.model = pickle.load(f)
         
         return await super().load()
