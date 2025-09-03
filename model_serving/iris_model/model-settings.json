@@ -1,6 +1,6 @@
 {
     "name": "ref-model",
-    "implementation": "inference.RefModel",
+    "implementation": "src.inference.RefModel",
     "parameters": {
         "uri": "./model/model.pkl"
     }

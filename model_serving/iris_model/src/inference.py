@@ -10,7 +10,7 @@ class RefModel(MLModel):
 
         uri = await get_model_uri(self._settings)
         print('uri :', uri)
-        # with open('model_serving/iris_model/model/model.pkl', 'rb') as f:
+
         with open(uri, 'rb') as f:
             self.model = pickle.load(f)
         
